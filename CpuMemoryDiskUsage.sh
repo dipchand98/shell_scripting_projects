@@ -27,4 +27,4 @@ storage_space=$(df -h | grep '/dev/nvme0n1p5' | awk '{print "total memory : "$2 
 echo "$storage_space" >> "$system_monitor"
 
 
-
+echo "===================================================="
