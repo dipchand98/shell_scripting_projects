@@ -28,3 +28,11 @@ echo "$storage_space" >> "$system_monitor"
 
 
 echo "===================================================="
+
+
+#checking cpu usage 
+cpu_ckeck=$( top -bn1 | awk '/%Cpu/ {print $2}')
+if [[ $cpu_ckeck -lt 60 ]]
+then
+	"Everything is fine $cpu_ckeck"
+fi
